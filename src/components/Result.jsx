@@ -7,14 +7,13 @@ function Result({ correct, questions }) {
 			<h2>
 				Вы отгадали{' '}
 				{correct === 0 || correct > 5
-					? `${correct} ответов` // работает
-					: correct === 1 // работает
+					? `${correct} ответов`
+					: correct === 1
 					? `${correct} ответ`
 					: correct === 2 || correct === 3 || correct === 4
 					? `${correct} ответа `
 					: null}{' '}
-				из {''}
-				{questions.length}
+				из {questions.length}
 			</h2>
 			<button onClick={() => window.location.reload()}>
 				Попробовать снова
